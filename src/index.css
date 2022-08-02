@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@layer utilities {
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+
+    font-size: 16px;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+        "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    background-color: #05040a;
+    color: white;
+    letter-spacing: -0.02em;
+}
+
+#root {
+    --popup-width: 360px;
+    --popup-max-width: min(610px, 100vw);
+    --popup-height: 600px;
+
+    width: 100%;
+    min-height: 100%;
+    height: 100%;
+}
+
+#Titanium_Wrapper {
+    min-width: var(--popup-width);
+    min-height: var(--popup-height);
+    height: 100%;
+    width: var(--popup-max-width);
+    margin-left: auto;
+    margin-right: auto;
+
+    position: relative;
+}
+
+.css-blurry-gradient {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    height: 250px;
+    filter: blur(50px);
+    background: radial-gradient(circle, #5a233c, #1b0b18);
+    opacity: 0.2;
+
+    /* min-width: var(--popup-width);
+    min-height: var(--popup-height);
+    width: calc(var(--popup-max-width) * 0.7); */
+    width: 100%;
+    pointer-events: none;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}

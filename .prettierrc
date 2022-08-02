@@ -1,0 +1,23 @@
+{
+    "printWidth": 120,
+    "trailingComma": "es5",
+    "tabWidth": 4,
+    "semi": true,
+    "singleQuote": false,
+    "importOrder": [
+        "<THIRD_PARTY_MODULES>",
+        "^@/utils/(.*)$",
+        "^@/layouts/(.*)$",
+        "^@/components/(.*)$",
+        "^@/models/(.*)$",
+        "^@/storage/(.*)$",
+        "^@/types/(.*)$",
+        "^@/services/(.*)$",
+        "^@/modules/(.*)$",
+        "^@/consts/(.*)$",
+        "^@/hooks/(.*)$",
+        "^[./]"
+    ],
+    "importOrderSeparation": true,
+    "importOrderSortSpecifiers": true
+}
